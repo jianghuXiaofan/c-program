@@ -1,7 +1,7 @@
 /*************************************************************************
     > File Name: pipe.c
     > Author: Bin_Xu
-    > Mail: X_Shares@yeah.net 
+    > Mail: X_Shares@outlook.com 
     > Created Time: 2016年06月26日 星期日 21时55分30秒
  ***************************Never BUG To Code****************************/
 
