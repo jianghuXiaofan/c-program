@@ -1,7 +1,7 @@
 /*************************************************************************
     > File Name: sign.c
     > Author: Bin_Xu
-    > Mail: X_Shares@yeah.net 
+    > Mail: X_Shares@outlook.com 
     > Created Time: 2016年06月25日 星期六 22时12分57秒
  ***************************Never BUG To Code****************************/
 
