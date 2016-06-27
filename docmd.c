@@ -3,6 +3,7 @@
 #include <unistd.h>
 
 #define TOK_ADD		5
+#define NAXLIN		128
 
 void do_line(char *);
 void cmd_add(void);
@@ -10,9 +11,9 @@ int get_token(void);
 
 int main(void)
 {
-	char 	line[MAXLINE];
-	while((fgets(line,MAXLINE,stdin)) != NULL)
-		do_line();
+	char 	line[MAXLIN];
+	while((fgets(line,MAXLIN,stdin)) != NULL)
+		do_line(line);
 	exit(0);
 }
 
