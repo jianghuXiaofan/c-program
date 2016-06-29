@@ -9,9 +9,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <sys/types.h>
+#include <sys/wait.h>
 int main(void)
 {
+	int wait_status;
 	int data_processed;
 	int file_pipes[2];
 	const char some_data[] = "123";
@@ -33,6 +35,7 @@ int main(void)
 		}
 		else{
 			data_processed = write(file_pipes[1],some_data,strlen(some_data));
+			wait(&wait_status);
 			printf("Wrote %d by  bytes\n",data_processed);
 		}
 	}
