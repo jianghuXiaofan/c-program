@@ -23,5 +23,6 @@ int main(void)
 	lseek(fd,0,SEEK_SET);			//other way to set file point to the stat
 	read(fd,rd_buf,wr_cnt);
 	printf("%s\n",rd_buf);
+	close(fd);
 	exit(0);
 }
