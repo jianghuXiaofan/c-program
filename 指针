@@ -1,0 +1,34 @@
+#include <stdio.h>
+//指针注意点： 这样做并不会报错，实际却是最大的错误
+int f1(int **p)
+{
+	int num = 4;
+	*p = &num;//指针注意点： 这样做并不会报错，实际却是最大的错误
+	return 0;
+}
+
+int f2(int val)
+{
+	int num = 5;
+	int *p = &num;
+	if( val == 0)
+	{
+		int val = 8;
+		p = &val;//指针注意点： 这样做并不会报错，实际却是最大的错误
+		//变量的作用域已经结束
+	}
+	return (*p+1);
+}
+
+int main(void)
+{
+	int num1 = 3;
+	int *p = &num1;
+	int **pPtr = &p;
+	
+	f1(pPtr);
+	printf("num = %d\n",**pPtr);
+	
+	printf("f2 return = %d\n",f2(0));
+	return 0;
+}
